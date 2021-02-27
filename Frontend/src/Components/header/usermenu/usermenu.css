@@ -1,0 +1,156 @@
+.object_fit_cover
+{
+  object-fit: cover;
+}
+
+@media (min-width: 300px) and (max-width: 799px) {
+  .menubars{
+    display: none;
+  }
+  }
+.userMenu {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 22px;
+
+  width: 85px;
+  height: 43px;
+  right: 24px;
+}
+.mainRow {
+  padding-left: 4vw;
+}
+.menuBars {
+  float: right;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 5px 5px 5px 0px;
+}
+
+#profile {
+  color: #308aed;
+}
+.userMenu .white-circle {
+  margin-right: 5px;
+  background: #fff;
+  border-radius: 50%;
+  width: 39px;
+  overflow: hidden;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bars1 {
+  float: left;
+  font-family: Font Awesome 5 Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+#circle {
+  width: 32px;
+  height: 32px;
+  /* position: absolute;
+  right: 0.4vw;
+  top: 3px; */
+}
+
+.mr_28{
+    margin-right: 28px;
+}
+
+.userMenu .menuicon {
+  color: #d4dfec;
+}
+
+.tocursor {
+  cursor: pointer;
+}
+
+#initial{
+  font-size:15px;
+  color:#009fee !important
+ }
+
+.dropdownButton {
+  padding-left: 16px;
+}
+.ion-align-items-end{
+  align-items: flex-end;
+}
+.mr_top{
+  margin-top: -27px;
+}
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.us_icon{
+  color:#58b2cf;
+  margin-right: -25px;  
+  margin-top: -6px;
+
+}
+.circle{
+  background: white;
+  border-radius: 50%;
+  width: 39px;
+  overflow: hidden;
+  height: 19px;
+  padding:5px
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.notification-dropdown-marker {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: white !important;
+  color: #0859b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  position: absolute;
+  right: -9px;
+  top: -6px;
+  border: 1px solid #0859b3;
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+  .mr_60 {
+    margin-right: 60px !important;
+  }
+}
+
+.mx_40_sm_20{
+    margin: 0px 40px;
+}
+
+.pr_40_sm_20{
+    padding-right: 40px;
+}
+
+@media (min-width: 799px) and (max-width: 992px) {
+    .mx_40_sm_20{
+        margin: 0px 20px;
+    }
+    .pr_40_sm_20{
+        padding-right: 20px;
+    }
+  }
+
+.message-icon-header{
+    height: 27px;
+    width: 20px;
+  }

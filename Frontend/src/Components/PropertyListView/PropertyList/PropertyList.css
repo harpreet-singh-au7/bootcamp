@@ -1,0 +1,115 @@
+.property-images-card-view-with-map {
+    height: 220px;
+    width: 330px;
+}
+
+.property-images-card-view-without-map {
+    height: 220px;
+    /* width: 619px; */
+}
+.mr_l{
+    margin-left: 26px;
+}
+.res{
+    justify-content: flex-start;
+    left: -336px;
+    top: 19px;
+}
+.pdt_23{
+    padding-top: 23px;
+}
+.ts_16 {
+    font-size: 16px!important;
+}
+.ove{
+    overflow: hidden;
+    width:350px
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+ion-slides.property-images-slides {
+    --bullet-background-active: white !important;
+}
+
+ion-slides.property-images-slides div.swiper-button-prev {
+    background-image: none !important;
+}
+
+ion-slides.property-images-slides div.swiper-button-next {
+    background-image: none !important;
+}
+
+ion-slides.property-images-slides div.swiper-button-prev:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23808080'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+ion-slides.property-images-slides div.swiper-button-next:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23808080'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.mobile-grid-view-like-btn{
+    font-size: 25px;
+    --ionicon-stroke-width: 26px;
+    height: 30px;
+    width: 30px;
+    padding-top: 2px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.radius_8 {
+    border-radius: 8px;
+}
+.radius_8 {
+    --border-radius: 8px;
+}
+@media (min-width: 2500px) {
+    .res{
+      left: -894px;
+    }
+}
+@media (min-width: 300px) and (max-width: 799px) {
+    
+    .mr_l{
+      margin-left: 5px;
+    }
+    .ove{
+        width: 334px;
+        height: 341px;
+    }
+    .res{
+        left: -183px;
+        top: 220px;
+    }
+    .i_mob{
+        margin-top: -135px;
+    }
+    .w_full{
+        width: 220px !important;
+        font-weight: 800!important;
+        font-size: 17px !important;
+        line-height: 24px!important;
+        color: #000;
+        text-decoration: none;
+    }
+    .bd{
+        display:none !important
+    }
+    .ba{
+        display:none !important
+    }
+    .av{
+        display:none !important
+    }
+    .des_m{
+        font-weight: 800!important;
+        font-size: 17px !important;
+        line-height: 24px!important;
+        color: #000;
+        text-decoration: none;
+        margin-top: -25px; 
+    }
+    
+    }
