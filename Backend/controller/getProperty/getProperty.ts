@@ -1,8 +1,6 @@
-import mySqlDbConnection from "../../db/sqlConnector";
+import DataBase from "../../db/Database/database";
+import { totalPropertyCount } from "../../db/query/getproperty";
 
-const db = mySqlDbConnection();
-console.log(db)
 
-export  const getPropertyList = () =>{
-
-}
+const db = new DataBase()
+export const photourl = db.execute(totalPropertyCount())
