@@ -49,17 +49,12 @@ export default function mySqlDbConnection() {
         database: process.env.SQLDATABASENAME,
     });
 
-        connection.connect(function(err) {
-            if (err) throw err;
-            console.log("Connected!");
-        connection.query("select count(*) as total_property from property where property.for_rent = 1",function(err,result){
-            if(err){
-                console.log(err)
-            }
-            console.log(result + "result......")
-        }
-    )
-        return connection;
+    connection.connect(function(err) {
+        if (err) throw err;
+        console.error("err" + err);
+      })
+      console.log(" coneccttttionn")
+        return connection;      
         
-})
+
 }
