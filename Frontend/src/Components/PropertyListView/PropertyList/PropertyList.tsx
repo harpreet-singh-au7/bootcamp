@@ -12,30 +12,59 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Axios from 'axios'
 import Pagination from "../../Pagination/Pagination"
+import PropertyListView from "../PropertyListView";
 
 function PropertyList() {
 
   const [rentPropList,setrentPropList] = useState([])
   const [totalCount,setTotalCount] = useState([])
-  const [loading,setLoading] = useState(false)
+  const [imgUrl,setimgUrl] = useState([])
+  const [loading,setLoading] = useState(false) 
   const [currentPage,setCurrentPage]=useState(1)
   const [propertyPerPage,setPropertyPerPage]=useState(20)
+  const [propertyName,setPropertyName] = useState([])
 
   const paginate:any = (pageNumber:number) => setCurrentPage(pageNumber)
 
   useEffect(() => {
-    const rowData=async()=>await Axios.get('http://localhost:5000/api/rowcount').then((res)=>{
+    const rowData=async()=>await Axios.get('http://localhost:8000/api/rowcount').then((res)=>{
       setLoading(true)
+      // console.log(res.data + "responseeee")
       setTotalCount(res.data)
       setLoading(false)
     })
+    const imgData=async()=>await Axios.get('http://localhost:8000/api/imgUrl').then((res)=>{
+      setLoading(true)
+      // console.log(res.data + "responseeee")
+      setimgUrl(res.data)
+      setLoading(false)
+    })
+    const propertyN=async()=>await Axios.get('http://localhost:8000/api/propertyname').then((res)=>{
+      setLoading(true)
+      // console.log(res.data + "responseeee")
+      setPropertyName(res.data)
+      setLoading(false)
+    })
    rowData()
+   imgData()
+   propertyN()
   }, []);
 
-  const count=Array.from(Array(65).keys())
+  // console.log((totalCount) + " totalcount")
+  const count=Array.from(Array(Number(totalCount)).keys())
+  // console.log(count + "count")
+  var r :any= {}, i
   const indexOfLastPage = currentPage * propertyPerPage;
+  console.log(propertyName[0])
+
   const indexOfFirstPage = indexOfLastPage - propertyPerPage
   const currentProperty = count.slice(indexOfFirstPage,indexOfLastPage)
+  const imgarray = imgUrl.slice(0,Number(totalCount))
+  for (i = 0; i < count.length; i++) {
+    r[count[i]] = imgarray[i];
+  }
+  
+  
   return (
   <>
   {
@@ -50,13 +79,10 @@ function PropertyList() {
         <IonCol size="6" className="cursor-pointer px_0">
           <IonGrid className="images-array p_0">
             <IonSlide className="property-images-slides slide-image ove radius_8">
-              <img
-                src="https://propertymediaserver.blob.core.windows.net/images/Okcf7AtY%2Ftha0tf%2Fsmall%2Fimage.png"
-                alt="property Image"
-                className="i_mob"
-              />
-
-              
+            {/* {imgUrl.map(function(name, index){
+                    return (<img src={ imgUrl[index] }/>)
+                  })} */}
+                  <img src={r[i]} alt="propertyImages" />
             </IonSlide>
           </IonGrid>
         </IonCol>
@@ -70,12 +96,8 @@ function PropertyList() {
                     <div className="proeprty-card-like"></div>
                   </div>
                   <div className="mb_16 w_full text_grey_900 ps_16 font-weight-600 d-flex ion-align-items-center cursor-pointer">
-                    {/* Ringwood Gardens, E14 */}
-                    {/* {rentPropList.map((val)=>{
-                       console.log(Object.values(val))
-                      return <span>{val[1]}</span>
-                      
-                    })} */}
+                   {propertyName[i]}
+                   
                   </div>
                   <div className="mb_6 bd f14_l17 d-flex ion-align-items-center text_grey_600">
                   <img alt="" src="https://propertyloop-qa-dev.azurewebsites.net/build/assets/pl-icons/svg/bedroom.svg" className="iconSize margin-r-10  margin-xs-r-5 property-card-icon" />

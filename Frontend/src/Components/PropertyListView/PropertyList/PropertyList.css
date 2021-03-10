@@ -33,6 +33,9 @@
 ion-slides.property-images-slides {
     --bullet-background-active: white !important;
 }
+.swiper-slide img {
+    min-width: 100% !important;
+}
 
 ion-slides.property-images-slides div.swiper-button-prev {
     background-image: none !important;
