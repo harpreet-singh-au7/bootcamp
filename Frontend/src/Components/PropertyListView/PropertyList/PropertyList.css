@@ -73,18 +73,32 @@ ion-slides.property-images-slides div.swiper-button-next:hover {
       left: -894px;
     }
 }
-@media (min-width: 300px) and (max-width: 799px) {
+
+@media (min-width:1024px) and (max-width:1240px){
+    .res{
+        left: -100px;
+    }
+}
+
+@media (min-width:700px) and (max-width:900px){
+    .res{
+        left: 15px;
+    }
+}
+@media (min-width: 300px) and (max-width: 700px) {
     
     .mr_l{
       margin-left: 5px;
     }
     .ove{
-        width: 334px;
-        height: 341px;
+        width: 290px;
+        height: 182px;
+        margin-top: 163px;
     }
     .res{
-        left: -183px;
-        top: 220px;
+        left: -139px;
+        top: 364px;
+       
     }
     .i_mob{
         margin-top: -135px;

@@ -2,9 +2,6 @@
 import { promises } from "dns"
 import { Router } from "express"
 import { db } from ".."
-import { countController } from "../controller/getProperty/getProperty"
-
-import mySqlDbConnection, { pool } from "../db/Database/sqlConnector"
 import { bedroomCount, gettingProperty, gettingPropertyName, imgUrl, totalPropertyCount } from "../db/query/getproperty"
 
 const router = Router()
@@ -43,7 +40,7 @@ router.get("/bedcount", async (req,res) =>{
             console.log(err)
         }
         console.log(result + " bedddddddddddd")
-        res.send(result)
+        res.status(200).json(result)
     })
 })
 
